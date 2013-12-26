@@ -86,6 +86,7 @@ class MetaPreprocessor(Preprocessor):
                     lines.insert(0, line)
                     break # no meta data - done
         self.markdown.Meta = meta
+        self.markdown.contents = '\n'.join(lines)
         return lines
         
 
